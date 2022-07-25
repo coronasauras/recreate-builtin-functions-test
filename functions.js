@@ -22,9 +22,52 @@ function indexOf(item, array) {
 
 //Reverse function
 function reverse(array) {
-  let arrayReverse = [];
+  let temp = [];
   while (array.length) {
-    arrayReverse.push(array.pop());
+    temp.push(array.pop());
   }
-  return arrayReverse;
+  return temp;
+}
+
+//Slice function
+function slice(start, stop, array) {
+  let temp = [];
+  for (let i = start; i < stop; i++) {
+    temp.push(array[i]);
+  }
+
+  return temp;
+}
+
+//Concat function
+function concat(a, b) {
+  for (let i = 0; i < b.length; i++) {
+    a.push(b[i]);
+  }
+  return a;
+}
+
+//Join function
+function join(sep, array) {
+  let temp = "";
+  let sep1 = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (sep1 === 1) {
+      temp += sep;
+    }
+    temp += array[i];
+    sep1 = 1;
+  }
+  return temp;
+}
+
+//Max function
+function max(array) {
+  let temp = array[0];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > temp) {
+      temp = array[i];
+    }
+  }
+  return temp;
 }
